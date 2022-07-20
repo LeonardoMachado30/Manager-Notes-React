@@ -1,15 +1,29 @@
 import React, { Component } from "react";
-import './CardNota.css';
+import "./CardNota.css";
 
 class CardNota extends Component {
+  _deleteGrades() {
+    const index = this.props.index;
+    this.props.deleteGradesState(index);
+  }
+
   render() {
     return (
-      <section className="card-nota">
-        <header className="card-nota__cabecalho">
-          <h3 className="card-nota__titulo">{this.props.title}</h3>
-        </header>
-        <p className="card-nota_texto">{this.props.text}</p>
-      </section>
+      <>
+        <div className="flex-column">
+          <h3 className="card-nota__titulo">{this.props.text}</h3>
+          <p className="card-nota_texto">{this.props.title}</p>
+        </div>
+        <div>
+          <span
+            className="material-icons"
+            onClick={this._deleteGrades.bind(this)}
+          >
+            delete_outline
+          </span>
+          <h4>{this.props.category}</h4>
+        </div>
+      </>
     );
   }
 }

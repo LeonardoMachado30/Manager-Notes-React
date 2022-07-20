@@ -1,9 +1,10 @@
 :root {
   --sm-breakpoint: 980px;
   --font-size-16-pixels: 16px;
-  --rgb-box-gray-light: 6px 6px 3px rgba(0, 0, 0, 0.2);
+  --boxshadow-gray-light: 6px 6px 3px rgba(0, 0, 0, 0.2);
   --border-gray: 1px solid #ccc;
   --color-primary: #0213ffc4;
+  --box-shadow-primary: 6px 6px 3px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  padding: 0;
   position: relative;
   max-width: 1450px;
   width: 100%;
@@ -22,7 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(128, 128, 128, 0.481);
-  padding: 80px 0;
 }
 
 code {
@@ -40,15 +39,22 @@ textarea {
   padding: 6px 16px !important;
   height: 2rem;
   border-radius: 4px;
-  border:  var(--border-gray);
-  box-shadow: var(--rgb-box-gray-light);
+  border: var(--border-gray);
+  box-shadow: var(--boxshadow-gray-light);
   max-width: 500px;
   color: #000;
+  background-color: #fff;
   font-size: 1.2rem;
 }
 
-textarea{
+textarea {
   height: 200px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input:-ms-input-placeholder,
@@ -80,9 +86,15 @@ textarea::-moz-placeholder {
   color: rgb(152, 152, 152);
 }
 
+input:hover,
+/* select:hover, */
+textarea:hover {
+  margin: 0 -14px 0 -14px;
+  transition: 1s ease;
+}
 
-button{
-  content: '';
+button {
+  content: "";
   height: 34px;
   background: var(--color-primary);
   color: rgb(255, 254, 254);
@@ -91,7 +103,7 @@ button{
   max-width: 300px;
   border-radius: 12px;
   border: var(--border-gray);
-  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--boxshadow-gray-light);
   cursor: pointer;
   position: absolute;
   bottom: -20px;
@@ -99,14 +111,74 @@ button{
   width: 100%;
 }
 
-button:hover{
+button:hover {
   height: 44px;
   margin: 0 0 0 10px;
   transition: 1s ease;
 }
 
-input:hover, select:hover, textarea:hover{
-  margin: 0 0 0 10px;
-  font-weight: bold;
-  transition: 2s ease;
+ul {
+  padding: 0px;
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.gap-1 {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify-and-items-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-items-center{
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.max-width-1{
+  max-width: 200px;
+}
+
+.max-width-2{
+  max-width: 500px;
+}
+
+.max-width-3{
+  max-width: 800px;
+}
+
+.mb-5{
+  margin-bottom: 50px;
 }

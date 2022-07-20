@@ -1,6 +1,4 @@
 .card-nota{
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     border-radius: 4px;
@@ -8,7 +6,6 @@
     padding:16px;
     box-shadow: var(--rgb-box-gray-light);
     border: var(--border-gray);
-    width: 100%;
     background-color: #fff;
 }
 
