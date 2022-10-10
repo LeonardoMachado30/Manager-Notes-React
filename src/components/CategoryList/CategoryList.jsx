@@ -17,7 +17,7 @@ class CategoryList extends Component {
   }
 
   _addCategory(e) {
-    let value = e.target.value;
+    let value = e.target.value; 
     if (e.key === "Enter") this.props.addCategoryList(value);
   }
 
