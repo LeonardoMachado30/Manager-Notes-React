@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CardNota from "../CardNota";
 import "./ListaDeNotas.css";
 
 class ListaDeNotas extends Component {
@@ -10,7 +9,6 @@ class ListaDeNotas extends Component {
   componentDidMount() {
     this.props.setRegisterGrades(this._newState.bind(this));
     this.props.setRegisterCategorys(this._newState);
-    console.log(this.props.getGrades)
   }
 
   _newState(grades) {
