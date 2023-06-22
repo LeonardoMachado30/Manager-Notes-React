@@ -2,6 +2,7 @@
   "name": "gerenciador-de-notas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://leonardomachado30.github.io/Manager-Notes-React/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -15,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gh-pages -d out -t true",
+    "build": "react-scripts build && gh-pages -d build -t true",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
